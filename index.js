@@ -9,15 +9,16 @@ const helmet = require("helmet")
 var schedule = require("node-schedule")
 require("dotenv").config()
 
-var j = schedule.scheduleJob("47 20 * * *", function() {
+var j = schedule.scheduleJob("04 21 * * *", function() {
   console.log("this is the time", moment().format())
   getUsers()
 })
+
 //get the user from zendesk
 function getUsers() {
   //gets data and subtract one day
   var date = moment()
-    .subtract(1, "day")
+    .subtract(6, "day")
     .format("YYYY-MM-DD")
 
   axios
