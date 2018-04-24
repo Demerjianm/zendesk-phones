@@ -1,5 +1,5 @@
 {
-  "name": "united-hackathon",
+  "name": "zendesk-phones",
   "version": "1.0.0",
   "description":
     "this is a api to pull the sepearate phone fields from users zendesk account and merge them into the main phone field",

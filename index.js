@@ -3,13 +3,14 @@ const app = express()
 const port = 3000
 const axios = require("axios")
 const moment = require("moment")
-moment().format()
 const phoneFormatter = require("phone-formatter")
 const helmet = require("helmet")
-var schedule = require("node-schedule")
+const schedule = require("node-schedule")
 require("dotenv").config()
+moment().format()
 
-var j = schedule.scheduleJob("04 21 * * *", function() {
+//this is the scheduler so app runs at 530pm PST everyday
+var j = schedule.scheduleJob("05 24 * * *", function() {
   getUsers()
 })
 
