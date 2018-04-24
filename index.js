@@ -10,7 +10,6 @@ var schedule = require("node-schedule")
 require("dotenv").config()
 
 var j = schedule.scheduleJob("04 21 * * *", function() {
-  console.log("this is the time", moment().format())
   getUsers()
 })
 
@@ -18,7 +17,7 @@ var j = schedule.scheduleJob("04 21 * * *", function() {
 function getUsers() {
   //gets data and subtract one day
   var date = moment()
-    .subtract(6, "day")
+    .subtract(1, "day")
     .format("YYYY-MM-DD")
 
   axios
@@ -115,7 +114,4 @@ app.use(function(req, res, next) {
 
 app.listen(process.env.PORT || port, function() {
   console.log("App is listening on port " + port)
-  //importPhones()
-  //wooks()
-  //getUsers()
 })
