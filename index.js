@@ -67,7 +67,7 @@ async function beenie(masterArr) {
     }
   }
   console.log(finalArray)
-  //importPhones(finalArray)
+  importPhones(finalArray)
 }
 
 //Import the phone numbers through the identity api
