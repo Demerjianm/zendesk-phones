@@ -9,7 +9,7 @@ const helmet = require("helmet")
 var schedule = require("node-schedule")
 require("dotenv").config()
 
-var j = schedule.scheduleJob("40 20 * * *", function() {
+var j = schedule.scheduleJob("43 20 * * *", function() {
   console.log("this is the time", moment().format())
   getUsers()
 })
@@ -112,7 +112,7 @@ app.use(function(req, res, next) {
   next()
 })
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
   console.log("App is listening on port " + port)
   //importPhones()
   //wooks()
