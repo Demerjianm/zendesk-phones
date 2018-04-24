@@ -10,7 +10,7 @@ require("dotenv").config()
 moment().format()
 
 //this is the scheduler so app runs at 530pm PST everyday
-var j = schedule.scheduleJob("05 24 * * *", function() {
+var j = schedule.scheduleJob("05 0 * * *", function() {
   getUsers()
 })
 
