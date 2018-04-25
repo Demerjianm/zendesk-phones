@@ -28,7 +28,6 @@ function getUsers() {
       }
     })
     .then(response => {
-      //console.log(response)
       wooks(response.data.results)
     })
     .catch(error => {
@@ -67,15 +66,13 @@ async function beenie(masterArr) {
       finalArray.push(arr)
     }
   }
-  console.log(finalArray)
+  console.log("this is array", finalArray)
   importPhones(finalArray)
 }
 
 //Import the phone numbers through the identity api
 function importPhones(arr) {
-  console.log(arr)
   arr.map(key => {
-    console.log(key)
     const options = {
       method: "POST",
       data: {
@@ -89,11 +86,11 @@ function importPhones(arr) {
 
     axios(options)
       .then(response => {
-        //console.log(response)
-        //console.log(response.data.user)
+        console.log(response.status)
+        console.log(response.data)
       })
       .catch(error => {
-        console.log(error)
+        //console.log(error.response)
       })
   })
 }
@@ -115,4 +112,5 @@ app.use(function(req, res, next) {
 
 app.listen(process.env.PORT || port, function() {
   console.log("App is listening on port " + port)
+  getUsers()
 })
