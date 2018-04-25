@@ -112,5 +112,4 @@ app.use(function(req, res, next) {
 
 app.listen(process.env.PORT || port, function() {
   console.log("App is listening on port " + port)
-  getUsers()
 })
