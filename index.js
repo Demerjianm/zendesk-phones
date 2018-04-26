@@ -10,7 +10,7 @@ require("dotenv").config()
 moment().format()
 
 //this is the scheduler so app runs at 530pm PST everyday
-var j = schedule.scheduleJob("27 0 * * *", function() {
+var j = schedule.scheduleJob("30 0 * * *", function() {
   getUsers()
   //hello
 })
@@ -19,7 +19,7 @@ var j = schedule.scheduleJob("27 0 * * *", function() {
 function getUsers() {
   //gets data and subtract one day
   var date = moment()
-    .subtract(1, "day")
+    .subtract(2, "day")
     .format("YYYY-MM-DD")
 
   axios
@@ -110,7 +110,6 @@ app.use(function(req, res, next) {
   )
   next()
 })
-console.log(process.env.PORT)
 app.listen(process.env.PORT || port, function() {
   console.log("App is listening on port " + port)
 })
