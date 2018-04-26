@@ -10,7 +10,7 @@ require("dotenv").config()
 moment().format()
 
 //this is the scheduler so app runs at 530pm PST everyday
-var j = schedule.scheduleJob("16 0 * * *", function() {
+var j = schedule.scheduleJob("20 0 * * *", function() {
   getUsers()
 })
 
@@ -90,7 +90,7 @@ function importPhones(arr) {
         console.log(response.data)
       })
       .catch(error => {
-        //console.log(error.response)
+        console.log(error.response)
       })
   })
 }
