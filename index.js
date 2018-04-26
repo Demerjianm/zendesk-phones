@@ -9,8 +9,8 @@ const schedule = require("node-schedule")
 require("dotenv").config()
 moment().format()
 
-//this is the scheduler so app runs at 530pm PST everyday
-var j = schedule.scheduleJob("30 0 * * *", function() {
+//this is the scheduler so app runs at 1230am PST everyday
+var j = schedule.scheduleJob("30 7 * * *", function() {
   getUsers()
   //hello
 })
