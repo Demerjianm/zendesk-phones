@@ -12,6 +12,7 @@ moment().format()
 //this is the scheduler so app runs at 530pm PST everyday
 var j = schedule.scheduleJob("22 0 * * *", function() {
   getUsers()
+  //hello
 })
 
 //get the user from zendesk
