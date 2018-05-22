@@ -8,6 +8,7 @@ const helmet = require("helmet")
 const schedule = require("node-schedule")
 require("dotenv").config()
 moment().format()
+app.use(helmet())
 
 //this is the scheduler so app runs at 1230am PST everyday
 var j = schedule.scheduleJob("30 7 * * *", function() {
@@ -21,6 +22,8 @@ function getUsers() {
   var date = moment()
     .subtract(2, "day")
     .format("YYYY-MM-DD")
+
+  console.log(date)
 
   axios
     .get(process.env.USERSURL + date, {
@@ -68,7 +71,7 @@ async function beenie(masterArr) {
     }
   }
   console.log("this is array", finalArray)
-  importPhones(finalArray)
+  //importPhones(finalArray)
 }
 
 //Import the phone numbers through the identity api
@@ -95,8 +98,6 @@ function importPhones(arr) {
       })
   })
 }
-
-app.use(helmet())
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*")
