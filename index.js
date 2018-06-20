@@ -20,11 +20,11 @@ var j = schedule.scheduleJob("30 7 * * *", function() {
   getUsers()
 })
 
-var j = schedule.scheduleJob("7 21 * * *", function() {
+var j = schedule.scheduleJob("35 7 * * *", function() {
   userInfo()
 })
 
-var j = schedule.scheduleJob("10 21 * * *", function() {
+var j = schedule.scheduleJob("40 7 * * *", function() {
   organizationInfo()
 })
 
@@ -334,7 +334,4 @@ app.use(function(req, res, next) {
 })
 app.listen(process.env.PORT || port, function() {
   console.log("App is listening on port " + port)
-  //getUsers()
-  //userInfo()
-  //organizationInfo()
 })
