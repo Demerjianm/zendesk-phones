@@ -345,6 +345,10 @@ nocache@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/nocache/-/nocache-2.0.0.tgz#202b48021a0c4cbde2df80de15a17443c8b43980"
 
+node-salesforce-connection@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-salesforce-connection/-/node-salesforce-connection-2.3.0.tgz#d6ded186c3e9d8406589163e429d288aae852f12"
+
 node-schedule@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/node-schedule/-/node-schedule-1.3.0.tgz#e7a7e816a7f2550d5b170bd106e765db28bdf030"
