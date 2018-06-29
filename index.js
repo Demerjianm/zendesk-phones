@@ -20,11 +20,11 @@ var j = schedule.scheduleJob("30 7 * * *", function() {
   getUsers()
 })
 
-var j = schedule.scheduleJob("6 16 * * *", function() {
+var j = schedule.scheduleJob("35 7 * * *", function() {
   userInfo()
 })
 
-var j = schedule.scheduleJob("10 16 * * *", function() {
+var j = schedule.scheduleJob("40 7 * * *", function() {
   organizationInfo()
 })
 
