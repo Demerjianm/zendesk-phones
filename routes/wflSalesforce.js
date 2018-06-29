@@ -16,14 +16,14 @@ app.use(helmet())
 let sfusername = process.env.USERNAME
 let sfpassword = process.env.PASSWORD
 
-var j = schedule.scheduleJob("05 8 * * *", function() {
+var j = schedule.scheduleJob("06 18 * * *", function() {
   get_token(process.env.WFLPULLREPORT)
 })
 var j = schedule.scheduleJob("05 5 16 * *", function() {
   get_token(process.env.WFLPULLREPORT)
 })
 
-var j = schedule.scheduleJob("15 8 * * *", function() {
+var j = schedule.scheduleJob("15 18 * * *", function() {
   get_token(process.env.WFLPULLOTHER)
 })
 var j = schedule.scheduleJob("20 5 16 * *", function() {
