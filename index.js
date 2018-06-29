@@ -9,11 +9,13 @@ let SalesforceConnection = require("node-salesforce-connection")
 const schedule = require("node-schedule")
 require("dotenv").config()
 moment().format()
+app.use(helmet())
 
+//routes
+const wflSalesforce = require("./routes/wflSalesforce")
+app.use("/api/wflSalesforce", wflSalesforce)
 let username = process.env.USERNAME
 let password = process.env.PASSWORD
-
-app.use(helmet())
 
 //this is the scheduler so app runs at 1230am PST everyday
 var j = schedule.scheduleJob("30 7 * * *", function() {
@@ -332,6 +334,7 @@ app.use(function(req, res, next) {
   )
   next()
 })
+
 app.listen(process.env.PORT || port, function() {
   console.log("App is listening on port " + port)
 })
